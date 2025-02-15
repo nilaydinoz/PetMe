@@ -6,109 +6,139 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="apple-touch-icon" sizes="180x180" href="/Assets/Images/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/Assets/Images/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/Assets/Images/favicon-16x16.png" />
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="/Assets/Images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/Assets/Images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/Assets/Images/favicon-16x16.png" /> -->
   <link rel="manifest" href="/site.webmanifest" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
   <link rel="stylesheet" href="./output.css" />
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="./introSection.css" />
   <link rel="stylesheet" href="./navbar.css" />
   <link rel="stylesheet" href="./mobileView.css" />
-  <link rel="stylesheet" href="./blogs/blog.css">
-  <link rel="icon" type="image/x-icon" href="/Assets/Images/logo.ico" />
+  <link rel="stylesheet" href="./style_PetCards.css" />
   <link rel="icon" type="image/x-icon" href="logo.png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="" />
+
   <script defer src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"></script>
-  <link href="https://unpkg.com/tailwindccss@^2/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="shortcut icon" type="image/x-icon" href="/PetMe/Assets/Images/logo.jpg" />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
   <title>Blogs</title>
 </head>
 
 <body>
   <header
-    class="header text-gray-400 bg-header-offwhite body-font flex flex-row items-center justify-center xl:justify-around"
+    class="header text-gray-400 bg-header-offwhite body-font flex flex-row items-center justify-center lg:justify-around"
     id="header">
     <div class="flex flex-row items-center md:flex-row md:items-center p-2" id="logo">
       <span class="mission-1 mission-dark"> Saving Lives </span>
-      <a class="logo-border" href="index.html">
+      <a class="logo-border remover" href="index.html">
         <img class="rounded-full logo-size" src="./Assets/Images/logo.jpg" alt="logo" />
       </a>
       <span class="mission-2 mission-dark"> Saving Animals </span>
-    </div>
-    <button data-collapse-toggle="navbar-default" type="button"
-      class="absolute top-7 right-4 sm:inline-flex sm:items-center p-2 xl:hidden focus:outline-none text_4"
-      aria-controls="navbar-default" aria-expanded="false" id="nav-button">
+      <!--
+      <div class="w-full mt-8 md:mt-0">
+        <h1 class="text-4xl text_2  text-center md:text-left md:ml-12 uppercase font-serif font-bold " id = "heading-adopt-me">Adopt
+          today!</h1>
+        <p class="text-lg text-gray-400 text-center md:text-left md:ml-12 mt-2">Give life to a needed animal</p>
+      </div> -->
+      </div>
+      <button
+        data-collapse-toggle="navbar-default"
+        type="button"
+        class="absolute top-4 right-4 sm:inline-flex sm:items-center p-2 lg:hidden focus:outline-none text_4"
+        aria-controls="navbar-default"
+        aria-expanded="false"
+        id="nav-button"
+      >
       <span class="sr-only">Open main menu</span>
-      <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd"
+      <svg
+        class="w-6 h-6"
+        aria-hidden="true"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
           d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-          clip-rule="evenodd"></path>
+          clip-rule="evenodd"
+        ></path>
       </svg>
     </button>
     <nav class="">
-      <div class="hidden w-full xl:block z-2" id="navbar">
-        <ul
-          class="w-[100vw] h-1/2 top-0 right-0 p-8 xl:px-3 mt-12 xl:mt-0 text-center text-base xl:text-[18px] space-y-4 xl:space-y-0 xl:space-x-5 lg:static xl:w-auto flex flex-col rounded-lg items-center xl:items-center xl:bg-transparent xl:border-0 xl:flex-row justify-between">
+      <div class="hidden w-full lg:block z-2" id="navbar">
+        <ul class="w-[100vw] h-1/2 top-0 right-0 p-4 lg:p-4 mt-12 lg:mt-0 text-center text-base md:text-md space-y-4 lg:space-y-0 lg:space-x-5 lg:static lg:w-auto flex flex-col rounded-lg items-center lg:items-center lg:bg-transparent lg:border-0 lg:flex-row justify-between">
+         <div class="nav-item">
           <li>
             <a href="./index.html"
-              class="text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">Home</a>
+            class="lg:p-1 text-custom-heading font-bold underline-offset-4 turn-red-hover navbar-item">Home</a>
           </li>
+          </div>
           <li>
             <a href="./index.html#meet"
-              class="xl:p-3 text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">Meet
+            class="lg:p-1 text-custom-heading font-bold underline-offset-4 turn-red-hover navbar-item">Meet
               Pets</a>
           </li>
           <li>
             <a href="./index.html#About"
-              class="text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">About
+            class="lg:p-1 text-custom-heading font-bold underline-offset-4 turn-red-hover navbar-item">About
               Us</a>
           </li>
           <li>
             <a href="./news.html"
-              class="text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">Pet
+            class="lg:p-1 text-custom-heading font-bold underline-offset-4 turn-red-hover navbar-item">Pet
               News</a>
           </li>
           <li>
-            <a href="./blog.html"
-              class="text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">Blogs</a>
-          </li>
-          <li>
             <a href="./donate.html"
-              class="text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">Donate</a>
+            class="lg:p-1 text-custom-heading font-bold underline-offset-4 turn-red-hover navbar-item">Donate</a>
           </li>
           <li>
-            <a href="./volunteer.html"
-              class="text-custom-heading font-bold  underline-offset-4 turn-red-hover navbar-item">Support Us</a>
+            <div x-data="{ open: false }" @mouseleave="open = false" class="relative">
+            <a @mouseover="open = true" class=" lg:p-1 text-custom-heading flex font-bold underline-offset-4 turn-red-hover navbar-item">
+              Support Us
+              <svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="mt-1">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </a>
+            <div x-show="open" class="z-20 absolute -left-1 w-[7.5rem] py-2 bg-gray-100 rounded-md shadow-xl hover:bg-gray-400 ">
+              <a href="volunteer.html" class=" remover block px-4 py-2 text-base text-gray-300 text-gray-700 hover:text-white">Become a Volunteer</a>
+            </div>
+            </div>
           </li>
           <li>
             <a href="./reportstary.html"
-              class="text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">SOS
+              class="lg:p-1 text-custom-heading font-bold underline-offset-4 turn-red-hover navbar-item">SOS
               Report</a>
           </li>
           <li>
-            <a href="./index.html#contact">
-              <button
-                class="inline-flex items-center bg-header-orange-light border-0 py-2 lg:py-2 text-choco text-base px-2 focus:outline-none text_4 font-bold rounded mt-4 md:mt-0 hover:translate-x-2 transition-transform">
+            <a href="#contact"
+            class="lg:p-1 text-custom-heading font-bold  underline-offset-4 turn-red-hover navbar-item remover">
+              <button class="flex inline-flex items-center bg-header-orange-light border-0 py-2 lg:py-2 text-choco text-base px-2 focus:outline-none text_4 font-bold rounded mt-4 md:mt-0 hover:bg-hover-choco hover:translate-x-2 transition-transform text-light-mode">
                 Contact Us
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  class="w-4 h-4 ml-1 transform translate-x-0 transition-transform" viewBox="0 0 24 24">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="w-4 h-4 ml-1 transform translate-x-0 transition-transform"
+                  viewBox="0 0 24 24"
+                >
                   <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
               </button>
             </a>
-          </li>
+          </li> 
           <li>
-            <a id="theme-toggle">
-              <i class="ri-sun-line turn-yellow-hover light-theme" id="switch"></i>
+            <a id="theme-toggle" class="remover">
+              <i class="ri-sun-line light-theme" id="switch"></i>
             </a>
           </li>
           <!-- google translate -->
-          <div id="google_translate_element">
+          <!-- <div id="google_translate_element">
             <script type="text/javascript"
               src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-          </div>
+          </div> -->
         </ul>
       </div>
     </nav>
@@ -117,11 +147,11 @@
   <!---Blogs container-->
   <section class="main-body-section bg-blog bg-opacity-90 bg-white-200">
     <div class="container max-w-5xl mx-auto">
-      <img src="./Assets/cats-dogs.jpg" class="mt-32" />
-      <h1 class="xl:-mt-7 mb-2 text-black text-5xl leading-tight font-bold text-center w-full">
+      <img src="./Assets/cats-dogs.jpg" class="mt-24" />
+      <h1 class="mb-2 text-black text-5xl leading-tight font-bold text-center w-full mt-10">
         Blogs
       </h1>
-      <p class="text-center w-full bold text-amber-900">
+      <p class="text-center justify-center w-full bold text-amber-900 mb-12">
         <b>A Blog For Pet Lovers And Their Pet Stories</b>
       </p>
     </div>
@@ -143,16 +173,19 @@
 
   <!-- Footer section  -->
 
-  <footer class="bg-black text-white">
+  <footer class="bg-black text-white shadow-inner -mt-[48px] pt-4 pb-8">
     <div class="flex p-5 justify-between">
-      <div class="flex flex-1 flex-col text-center sm:flex-row items-center justify-center space-x-3">
+      <div class="flex flex-1 flex-col text-center sm:flex-row items-center justify-center">
         <div>
-          <img class="rounded-full w-24 cursor-pointer" src="./Assets/Images/logo.jpg" alt="logo"
-            onclick="scrollToTop();" />
+          <a href="#top">
+            <img class="rounded-full w-24 cursor-pointer hover:scale-110" src="./Assets/Images/logo.jpg" alt="logo" />
+          </a>
         </div>
         <div>
-          <div class="space-y-2 text-white">
-            <h3 class="text-2xl">Adopt a pet</h3>
+
+          <div class="space-y-2 " style="color:#f1f5f9;">
+
+            <h3 class="text-2xl font-medium">Adopt a pet</h3>
             <div>Give life to an animal in need</div>
           </div>
         </div>
@@ -160,29 +193,34 @@
 
       <!-- Subscribe column -->
       <div class="md:flex flex-col hidden text-center items-center flex-1">
-        <div class="space-y-2">
-          <h3 class="text-2xl text-white">Subscribe to our newsletter</h3>
-          <div class="text-md text-white">
-            Get the latest news and updates delivered straight to your inbox.
+        <form id="subscription-form">
+
+          <div class="space-y-2" style="color:#f1f4f9">
+            <h3 class="text-2xl text-center" style="color:#f1f5f9">Subscribe to our newsletter</h3>
+
+            <div class="text-md">
+              Get the latest news and updates delivered straight to your inbox.
+            </div>
+            <div class="text-center">
+              <input class="my-1 mr-2 p-2 rounded-md text-black" type="email" id="email" name="email"
+                placeholder="Enter your email address" />
+              <div id="error-message" class="text-red-500 hidden">Email address is required.</div>
+              <button class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-md" type="submit"
+                id="subscribe-button">
+                Subscribe
+              </button>
+            </div>
           </div>
-          <div class="text-center">
-            <input class="my-1 mr-2 p-2 rounded-md text-black" type="email" id="email" name="email"
-              placeholder="Enter your email address" />
-            <button class="bg-red-600 hover:bg-red-500 text-white py-2 px-4 rounded-md" type="submit">
-              Subscribe
-            </button>
-          </div>
-        </div>
+        </form>
       </div>
       <!-- Subscribe column end -->
 
       <!-- Social icons  -->
       <div class="flex-1 flex flex-col items-center justify-center">
-        <div class="text-2xl">Follow us on</div>
+        <div class="text-2xl font-medium">Follow us on</div>
         <div class="flex mt-2 flex-row space-x-3 my-0">
           <div class="hover:scale-110 transition-all">
             <a href="#" class="w-5 ml-3">
-
               <!-- Facebook icon -->
               <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" class="fill-white" viewBox="0 0 20 20">
                 <path
@@ -211,18 +249,28 @@
         </div>
       </div>
       <!-- Social icons end -->
+
+      <!-- Scroll to top -->
+      <div class="md:pr-8 hover-effect">
+        <a href="#top">
+          <button id="bttbutton" title="backtotop">
+            <img src="./image.svg" class="w-6 md:w-10 md:object-left sm:w-10" />
+          </button>
+        </a>
+      </div>
+      <!-- Scroll to top -->
     </div>
 
-    <div class="bg-gray-900 pt-5 pb-8 flex flex-col text-center md:hidden mt-8 items-center flex-1">
-      <div class="space-y-2" style="color:white">
+    <div class="pt-5 pb-8 flex flex-col text-center md:hidden mt-8 items-center flex-1">
+      <div class="space-y-2">
         <h3 class="text-2xl text-center">Subscribe to our newsletter</h3>
         <div class="text-md">
           Get the latest news and updates delivered straight to your inbox.
         </div>
         <div class="text-center">
           <input class="my-1 mr-2 p-2 rounded-md" type="email" id="email" name="email"
-            placeholder="Enter your email address" />
-          <button class="bg-red-600 hover:bg-red-500 text-white py-2 px-4 rounded-md" type="submit">
+            placeholder="Enter your email address" style="color: black" />
+          <button class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-md" type="submit">
             Subscribe
           </button>
         </div>
@@ -230,7 +278,7 @@
     </div>
     <div id="copyright">
       <p>
-        Copyright &copy; <span id="date"></span> PetMe All Right Reserved.
+        Copyright &copy; <span id="date"></span> [PetMe] All Rights Reserved.
       </p>
     </div>
   </footer>
@@ -240,41 +288,53 @@
     document.getElementById("date").innerHTML = year;
   </script>
   <script>
-    let mybutton = document.getElementById("bttbutton");
-    window.onscroll = function () {
-      scrollFunction();
-    };
+    // Add this JavaScript code to trigger the animation when meet cards come into view
+    window.addEventListener("scroll", function () {
+      const meetCards = document.querySelectorAll(".main-card");
+      const scrollPosition = window.scrollY + window.innerHeight;
 
-    function scrollFunction() {
-      if (
-        document.body.scrollTop > 20 ||
-        document.documentElement.scrollTop > 20
-      ) {
-        mybutton.style.display = "block";
-      } else {
-        mybutton.style.display = "none";
-      }
-    }
-
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-
-    // This script was added to make the footer LOGO scroll to top
-    function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
+      meetCards.forEach((card) => {
+        const cardOffset = card.offsetTop;
+        if (scrollPosition > cardOffset) {
+          card.style.opacity = "1";
+          card.style.transform = "translateY(0)";
+        }
       });
-    }
+    });
   </script>
+  <script>
+    // close the menu when a nav link is clicked
+    const menu_btn = document.querySelector('#nav-button')
+    const nav_links = document.querySelectorAll('nav ul li')
 
+    nav_links.forEach((link) => {
+      link.addEventListener('click', () => {
+        const currentWidth = window.innerWidth;
+        console.log(currentWidth);
+        if (currentWidth <= 1024) {
+          menu_btn.click();
+        }
+
+      })
+    })
+
+    // Add this JavaScript code to trigger the animation when About content comes into view
+    window.addEventListener("scroll", function () {
+      const aboutSection = document.querySelector("#about");
+      const aboutContent = aboutSection.querySelector(".fade-in");
+      const scrollPosition = window.scrollY + window.innerHeight;
+      const contentOffset = aboutContent.offsetTop;
+
+
+      if (scrollPosition > contentOffset) {
+        aboutContent.style.opacity = "1";
+        aboutContent.style.transform = "translateY(0)";
+      }
+    });
+  </script>
   <script src="index.js"></script>
-  <script src="light-dark-theme.js"></script>
-  <script src="blog.js"></script>
   <script src="navbar.js"></script>
+  <script src="light-dark-theme.js"></script>
 </body>
 
 </html>
