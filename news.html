@@ -16,11 +16,7 @@
 	<link rel="stylesheet" href="./introSection.css">
 	<link rel="stylesheet" href="./navbar.css">
 	<link rel="stylesheet" href="./mobileView.css">
-
 	<link rel="icon" type="image/x-icon" href="logo.png" />
-	
-
-
 
 	<script defer src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"></script>
 	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
@@ -48,82 +44,114 @@
 			</a>
 			<span class="mission-2 mission-dark"> Saving Animals </span>
 		</div>
-		<button data-collapse-toggle="navbar-default" type="button"
-			class="absolute top-7 right-4 sm:inline-flex sm:items-center p-2 xl:hidden focus:outline-none text_4"
-			aria-controls="navbar-default" aria-expanded="false" id="nav-button">
+		<button
+			data-collapse-toggle="navbar-default"
+			type="button"
+			class="absolute top-4 right-4 sm:inline-flex sm:items-center p-2 lg:hidden focus:outline-none text_4"
+			aria-controls="navbar-default"
+			aria-expanded="false"
+			id="nav-button"
+		>
 			<span class="sr-only">Open main menu</span>
-			<svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-				xmlns="http://www.w3.org/2000/svg">
-				<path fill-rule="evenodd"
-					d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-					clip-rule="evenodd"></path>
+			<svg
+			class="w-6 h-6"
+			aria-hidden="true"
+			fill="currentColor"
+			viewBox="0 0 20 20"
+			xmlns="http://www.w3.org/2000/svg"
+			>
+			<path
+				fill-rule="evenodd"
+				d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+				clip-rule="evenodd"
+			></path>
 			</svg>
 		</button>
 		<nav class="">
-			<div class="hidden w-full mb-5 xl:mb-0 xl:block z-2" id="navbar">
-				<ul
-					class="w-[100vw] h-1/2 top-0 right-0 p-8 xl:px-3 mt-12 xl:mt-0 text-center text-base xl:text-lg space-y-4 xl:space-y-0 xl:space-x-5 lg:static xl:w-auto flex flex-col rounded-lg items-center xl:items-center xl:bg-transparent xl:border-0 xl:flex-row justify-between">
-
+			<nav class="">
+				<div class="hidden w-full lg:block z-2" id="navbar">
+				  <ul class="w-[100vw] h-1/2 top-0 right-0 p-4 lg:p-4 mt-12 lg:mt-0 text-center text-base md:text-md space-y-4 lg:space-y-0 lg:space-x-5 lg:static lg:w-auto flex flex-col rounded-lg items-center lg:items-center lg:bg-transparent lg:border-0 lg:flex-row justify-between">
+				   <div class="nav-item">
 					<li>
 						<a href="./index.html"
-							class="text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">Home</a>
+						class="lg:p-1 text-custom-heading font-bold  underline-offset-4 turn-red-hover navbar-item"
+						>Home</a>
 					</li>
+					</div>
 					<li>
-						<a href="index.html#meet"
-							class="text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">Meet
+						<a href="./index.html#meet"
+						class="lg:p-1 text-custom-heading font-bold  underline-offset-4 turn-red-hover navbar-item"
+						>Meet
 							Pets</a>
 					</li>
 					<li>
-						<a href="index.html#About"
-							class="text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">About
+						<a href="./index.html#About"
+						class="lg:p-1 text-custom-heading font-bold  underline-offset-4 turn-red-hover navbar-item"
+
+						>About
 							Us</a>
 					</li>
 					<li>
-						<a href="./news.html"
-							class="text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">Pet News</a>
-					</li>
-					<li>
 						<a href="./blog.html"
-							class="text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">Blogs</a>
+						class="lg:p-1 text-custom-heading font-bold  underline-offset-4 turn-red-hover navbar-item"
+						>Blogs</a>
 					</li>
 					<li>
 						<a href="./donate.html"
-							class="text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">Donate</a>
+						class="lg:p-1 text-custom-heading font-bold  underline-offset-4 turn-red-hover navbar-item"
+						>Donate</a>
 					</li>
 					<li>
-						<a
-							href="./volunteer.html"
-							class="text-custom-heading font-bold  underline-offset-4 turn-red-hover navbar-item"
-							>Support Us</a
-						>
-					</li>
+						<div x-data="{ open: false }" @mouseleave="open = false" class="relative">
+						<a @mouseover="open = true" class=" lg:p-1 text-custom-heading flex font-bold underline-offset-4 turn-red-hover navbar-item">
+						  Support Us
+						  <svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="mt-1">
+						  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+						  </svg>
+						</a>
+						<div x-show="open" class="z-20 absolute -left-1 w-[7.5rem] py-2 bg-gray-100 rounded-md shadow-xl hover:bg-gray-400 ">
+						  <a href="volunteer.html" class=" remover block px-4 py-2 text-base text-gray-300 text-gray-700 hover:text-white">Become a Volunteer</a>
+						</div>
+						</div>
+					  </li>
 					<li>
 						<a href="./reportstary.html"
-							class="text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">SOS
+						class="lg:p-1 text-custom-heading font-bold  underline-offset-4 turn-red-hover navbar-item"
+						>SOS
 							Report</a>
 					</li>
 					<li>
-						<a href="./index.html#contact">
-							<button
-								class="inline-flex items-center bg-header-orange-light border-0 py-2 lg:py-2 text-choco px-2 focus:outline-none text_4 font-bold rounded text-base mt-4 md:mt-0">
-								Contact Us
-								<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-									stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-									<path d="M5 12h14M12 5l7 7-7 7"></path>
-								</svg>
-							</button>
+						<a href="./index.html#contact"
+						class="lg:p-1 text-custom-heading font-bold  underline-offset-4 turn-red-hover navbar-item remover">
+						  <button class="flex inline-flex items-center bg-header-orange-light border-0 py-2 lg:py-2 text-choco text-base px-2 focus:outline-none text_4 font-bold rounded mt-4 md:mt-0 hover:bg-hover-choco hover:translate-x-2 transition-transform text-light-mode">
+							Contact Us
+							<svg
+							  fill="none"
+							  stroke="currentColor"
+							  stroke-linecap="round"
+							  stroke-linejoin="round"
+							  stroke-width="2"
+							  class="w-4 h-4 ml-1 transform translate-x-0 transition-transform"
+							  viewBox="0 0 24 24"
+							>
+							  <path d="M5 12h14M12 5l7 7-7 7"></path>
+							</svg>
+						  </button>
 						</a>
-					</li>
+					  </li>
 					<li>
 						<a id="theme-toggle">
 							<i class="ri-sun-line turn-yellow-hover light-theme" id="switch"></i>
 						</a>
 					</li>
 					<!-- google translate -->
-					<div id="google_translate_element">
-						<script type="text/javascript"
-							src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-					</div>
+					<!-- <div id="google_translate_element">
+						<script
+						  type="text/javascript"
+						  src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+						></script>
+					  </div> -->
+					<!-- google translate -->
 				</ul>
 			</div>
 		</nav>
